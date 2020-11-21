@@ -140,8 +140,8 @@ if __name__ == '__main__':
     com_port = "COM12"
     baud_rate = 9600
     if len(sys.argv) >= 3:
-        com_port = sys.args[1]
-        baud_rate = sys.args[2]
+        com_port = sys.argv[1]
+        baud_rate = sys.argv[2]
     print("Starting server on port {} with baud rate of {}".format(com_port, baud_rate))
     thread = Thread(target = threaded_function, args=(com_port, baud_rate,))
     thread.start()
