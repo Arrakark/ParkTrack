@@ -129,7 +129,7 @@ def threaded_function(com_port, baud_rate):
             else:
                 Mazda.error_message = raw_line.decode("utf-8")
         except Exception as err:
-            print("Closing port")
+            print("Closing port due to exception: {}".format(err))
             rx_port.close()
             sleep(5)
             pass
