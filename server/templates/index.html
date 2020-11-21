@@ -1,0 +1,15 @@
+<html>
+<head>
+<meta http-equiv="refresh" content="7"/>
+<link rel="stylesheet" href='/static/style.css' />
+</head>
+<body> 
+    <div class="half">
+    <h2>{{ status_message }}</h2>
+    <img src="/static/compass.jpg" width="400"/>
+    <h3>{{ last_seen_message }}</h3>
+    {% if error_message %}
+      <h3>Error message: "{{ error_message }}"</h3>
+    {% endif %}
+</body>
+</html>
